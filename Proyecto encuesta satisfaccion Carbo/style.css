@@ -1,0 +1,175 @@
+html, body {
+    height: 100%; 
+    margin: 0; 
+}
+
+main {
+  flex: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-image: url('https://ideogram.ai/assets/image/lossless/response/WuxSfcZhS6C2Od1p1LfIwQ');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+img.logo {
+    display: block;
+    margin: 0 auto; 
+    max-width: 150px; 
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+label {
+    display: block;
+    margin-bottom: 8px; 
+    color: #333;
+    font-weight: bold; 
+}
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease; 
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
+    outline: none; 
+    border-color: #4A90E2; 
+    box-shadow: 0 0 5px rgba(74,144,226,0.5); 
+}
+button[type="submit"] {
+    background-color: #4A90E2; 
+    color: white; 
+    padding: 14px 28px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    display: none; 
+    margin: 30px auto; 
+    transition: background-color 0.3s ease;} 
+
+button[type="submit"]:hover {
+    background-color: #357ABD; 
+}
+
+.rating-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center; 
+}
+
+.rating-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rating-button:hover {
+  border-color: #4A90E2; 
+  background-color: #f5f9ff; 
+}
+
+.rating-button.selected {
+  background-color: #4A90E2; 
+  color: white; 
+  border-color: #4A90E2; 
+}
+
+.required::after {
+  content:"*"; color:red; margin-left:.25em
+}
+
+.success-message {
+  text-align:center;
+  display:none;
+}
+
+.icon-success {
+  font-size: 50px; 
+  color: green; 
+}
+
+.rating-labels {
+  display:flex;
+  justify-content: space-between;
+  width: 120%;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.rating-labels div {
+  text-align:center;
+  font-size: 14px;
+  color: #666;
+}
+
+.rating-button.satisfaccion-0 { background-color: #f50d00; color: white; }
+.rating-button.satisfaccion-1 { background-color: #ef2e00; color: white; }
+.rating-button.satisfaccion-2 { background-color: #f45e0d; color: white; }
+.rating-button.satisfaccion-3 { background-color: #f4850a; color: black; }
+.rating-button.satisfaccion-4 { background-color: #f5a104; color: black; }
+.rating-button.satisfaccion-5 { background-color: #f5bf05; color: black; }
+.rating-button.satisfaccion-6 { background-color: #f5dc01; color: black; }
+.rating-button.satisfaccion-7 { background-color: #abbd00; color: black; }
+.rating-button.satisfaccion-8 { background-color: #60ae00; color: black; }
+.rating-button.satisfaccion-9 { background-color: #24b700; color: black; }
+.rating-button.satisfaccion-10 { background-color:#00db1a; color: black; }
+
+
+.rating-button.recomendacion-0 { background-color: #f50d00; color: white; }
+.rating-button.recomendacion-1 { background-color: #ef2e00; color: white; }
+.rating-button.recomendacion-2 { background-color: #f45e0d; color: white; }
+.rating-button.recomendacion-3 { background-color: #f4850a; color: black; }
+.rating-button.recomendacion-4 { background-color: #f5a104; color: black; }
+.rating-button.recomendacion-5 { background-color: #f5bf05; color: black; }
+.rating-button.recomendacion-6 { background-color: #f5dc01; color: black; }
+.rating-button.recomendacion-7 { background-color: #abbd00; color: black; }
+.rating-button.recomendacion-8 { background-color: #60ae00; color: black; }
+.rating-button.recomendacion-9 { background-color: #24b700; color: black; }
+.rating-button.recomendacion-10 { background-color:#00db1a; color: black; }
+
+
+footer {
+    background-color: #333; 
+    color: rgb(255, 255, 255);
+    text-align: center; 
+    padding: 10px; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}

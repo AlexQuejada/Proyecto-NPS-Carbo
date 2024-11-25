@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción - CarboQuimica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/img/logocarbo (1).ico">
+</head>
+<body>
+
+    <div class="container">
+    
+        <h1>Encuesta de Satisfacción NPS </h1>
+        <img src="https://mcusercontent.com/525524cdc044b953e60ffd7e0/images/3f8a58c8-cc2b-6846-5b51-0aca417591ce.png" alt="Logo de CarboQuimica" class="logo">
+    
+        <form id="surveyForm" >
+            <div class="form-group">
+              <label class="required" for="nombre">Nombres</label>
+              <input type="text" id="nombre" name="nombre" required>
+          </div>
+    
+          <div class="form-group">
+              <label class="required" for="apellido">Apellidos</label>
+              <input type="text" id="apellido" name="apellido" required>
+          </div>
+    
+          <div class="form-group">
+              <label class="required" for="telefono">Número de Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" required>
+              <label>Tipo de Teléfono:</label>
+              <label><input type="radio" name="tipoTelefono" value="personal" required> Personal</label>
+              <label><input type="radio" name="tipoTelefono" value="corporativo"> Corporativo</label>
+          </div>
+    
+    
+          <div class="form-group">
+              <label class="required" for="correo">Correo Electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="CarboQuimica@exmple.com.co" required>
+              <label>Tipo de Correo:</label>
+                    <label><input type="radio" name="tipoCorreo" value="personal" required> Personal</label>
+                    <label><input type="radio" name="tipoCorreo" value="corporativo"> Corporativo</label>
+          </div>
+    
+          <div class="form-group">
+              <label class="required" for="razonSocial">Empresa</label>
+              <input type="text" id="razonSocial" name="razonSocial" required>
+          </div>
+    
+          <div class='form-group'>
+              <label class='required' for='tipoId'>Tipo de Identificación</label>
+              <select id='tipoId' name='tipoId' required>
+                  <option value=''>Seleccione una opción</option>
+                  <option value='CC'>CC - Cédula de Ciudadanía</option>
+                  <option value='NIT'>NIT - Número de Identificación Tributaria</option>
+                  <option value='PA'>PA - Pasaporte</option>
+              </select>
+              <input type='text' id='numId' name='numId' pattern='[a-zA-Z0-9-]+' title='Solo se permiten letras, números y guiones' placeholder='Ingrese su número de identificación' required>
+          </div>
+    
+          
+          <div class='form-group'>
+              <label class='required'>¿Qué tan satisfecho está con el servicio prestado por CarboQuimica?</label>
+              <div class='rating-group' id='satisfaccion'>
+                 
+                  <script>
+                      for (let i = 0; i <= 10; i++) {
+                          document.write(`<button type='button' class='rating-button' onclick='selectRating("satisfaccion", this)'>${i}</button>`);
+                      }
+                  </script>
+                 
+                  <input type='hidden' id='satisfaccionValue' name='satisfaccion'>
+                  
+                  <div class="rating-labels">
+                      <div>0<br>Nada satisfecho</div>
+                      <div>10<br>Muy satisfecho</div>
+                  </div>
+              </div>
+          </div>
+    
+          
+          <div class='form-group'>
+              <label class='required'>¿Qué tan probable es que recomiende a CarboQuimica con alguna empresa del sector?</label>
+              <div class='rating-group' id='recomendacion'>
+                
+                  <script>
+                      for (let i = 0; i <= 10; i++) {
+                          document.write(`<button type='button' class='rating-button' onclick='selectRating("recomendacion", this)'>${i}</button>`);
+                      }
+                  </script>
+                
+                  <input type='hidden' id='recomendacionValue' name='recomendacion'>
+                  
+                  <div class="rating-labels">
+                      <div>0<br>Nada Probable</div>
+                      <div>10<br>Muy Probable</div>
+                  </div>
+              </div>
+          </div>
+    
+          
+    <div class='form-group'>
+        <label>Seleccione el área que influyó en sus respuestas:</label>
+        <div class='areas-mejora'>
+            <label><input type='checkbox' name='areas' value='Precios'> Precio</label><br/>
+            <label><input type='checkbox' name='areas' value='Comercial'> Comercial</label><br/>
+            <label><input type='checkbox' name='areas' value='Servicio y atención al cliente'> Servicio y atención al cliente</label><br/>
+            <label><input type='checkbox' name='areas' value='Comercio Exterior'> Comercio Exterior</label><br/>
+            <label><input type='checkbox' name='areas' value='Servicio Técnico'> Servicio Técnico</label><br/>
+            <label><input type='checkbox' name='areas' value='Cartera'> Cartera</label><br/>
+            <label><input type='checkbox' name='areas' value='Disponibilidad de Producto'> Disponibilidad de Producto</label><br/>
+            <label><input type='checkbox' name='areas' value='Operaciones Logísticas'> Operaciones Logísticas</label><br/>
+            <label><input type='checkbox' name='areas' value='Producción'> Producción</label><br/>
+            <label><input type='checkbox' name='areas' value='Transporte y Distribución'> Transporte y Distribución</label><br/>
+            <label><input type ='checkbox'name ='areas'value ='Otro'> Otro</label>          
+        </div>   
+    </div>
+    
+    <div class ='form-group'>
+        <label for ='motivo'>Indique el motivo de sus respuestas:</label>
+        <textarea id ='motivo'name ='motivo'maxlength ='200'rows ='4'oninput ='updateCharCount(this)' required></textarea>  
+        <div class ='char-counter'><span id ='charCount'>0</span>/200 caracteres</div>  
+    </div>
+    
+    <div id="policySection">
+        <h3>Política de Tratamiento de Datos</h3>
+        <p>AUTORIZACÓN PARA EL TRATAMIENTO DE DATOS PERSONALES A CARBOQUIMICA S.A.S:</p>
+        <p>Al dar click en “Acepto término y condiciones, <a href="https://alexquejada.github.io/politicaPrivacidad-Carboquimica/">política de tratamiento de datos</a> y Autorizo el Tratamiento de mis datos personales a la siguiente Autorización” al ingresar mis datos personales en la presente página Web, otorgo de manera previa, expresa e informada autorización a CARBOQUIMICA S.A.S.</p>
+        <button id="acceptBtn">Acepto los términos</button>
+    </div>
+    
+    <button type ='submit'>Enviar Encuesta</button>
+    
+    <div id ='successMessage'style ='display:none;'class ="success-message">
+        <img src="https://mcusercontent.com/525524cdc044b953e60ffd7e0/images/3f8a58c8-cc2b-6846-5b51-0aca417591ce.png" alt="Logo de CarboQuimica" class="logo">
+        Su respuesta ha sido enviada satisfactoriamente.
+    </div>
+    <script src ='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js'></script>
+    <script src ="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+    <script src="/funtion.js"></script>
+        </form>
+
+    </div>
+
+</body>
+
+<footer style="background-color: rgba(0, 0, 0, 0.63); padding: 20px; text-align: center;">
+    <div>
+        <img src="https://mcusercontent.com/525524cdc044b953e60ffd7e0/images/3f8a58c8-cc2b-6846-5b51-0aca417591ce.png" alt="Logo de CarboQuimíca" style="width: 100px; height: auto;">
+    </div>
+    <p>&copy; <span id="year"></span> CarboQuimíca.<br> Todos los derechos de la pagina han sido reservados reservados por el autor del proyecto.</p>
+</footer>
+
+</html>
